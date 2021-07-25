@@ -1,0 +1,116 @@
+.header_container {
+  padding: 1.75rem 3.5rem;
+  max-width: 1920px;
+  width: 100%;
+  height: 6rem;
+  margin: 0 auto;
+  color: white;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  position: relative;
+  z-index: 999;
+
+  img {
+    height: 2.25rem;
+    filter: contrast(1.3);
+  }
+
+  .header-action-container {
+    justify-self: end;
+    display: flex;
+  }
+
+  .language-btn {
+    background-color: rgba($color: #181818, $alpha: 0.6);
+    margin-right: 2rem;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.2rem 0.6rem 0.5rem;
+    box-shadow: inset 0px 0px 10px black;
+
+    select {
+      background: transparent;
+      border: none;
+      color: rgb(255, 251, 240);
+      font-weight: 500;
+      font-size: 14px;
+      background: url(../assets/icons/down_arrow.svg) no-repeat right;
+      appearance: none;
+      padding-right: 1.2rem;
+      background-size: 1.5rem 0.4rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    option {
+      background-color: gray;
+      font-weight: normal;
+      display: block;
+      white-space: nowrap;
+      min-height: 1.2em;
+      padding: 0px 2px 1px 1rem;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header_container {
+    img {
+      height: 2.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header_container {
+    padding: 1.9rem 2.9rem;
+    grid-template-columns: 50% 50%;
+
+    img {
+      height: 1.9rem;
+    }
+
+    .language-btn {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      padding-bottom: 0.5rem;
+      border-radius: 0.1rem;
+      margin-right: 1.8rem;
+      box-shadow: inset 0px 0px 5px black;
+      border-color: #acacac;
+
+      select {
+        padding-right: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header_container {
+    padding: 1.7rem 1.4rem;
+    grid-template-columns: 40% 60%;
+
+    img {
+      height: 1.5rem;
+    }
+
+    .language-btn {
+      padding: 0.25rem 0.1rem 0.3rem 0.25rem;
+      margin-right: 0.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header_container {
+    padding: 1.8rem 1rem;
+
+    img {
+      height: 1.4rem;
+    }
+  }
+}
