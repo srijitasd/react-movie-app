@@ -1,14 +1,15 @@
-import { React, useState } from "react";
+import React from "react";
+import { useState } from "react";
 
-function Cta() {
+function Cta({ margin }) {
   const [email, setEmail] = useState("");
 
   return (
-    <div>
-      <h3>
+    <React.Fragment>
+      <h3 style={{ margin, textAlign: "center", marginBottom: 0 }}>
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
-      <div className="hero-form-container">
+      <div className="hero-form-container" style={{ margin, marginTop: 0 }}>
         <input
           type="email"
           className="form-input"
@@ -33,7 +34,7 @@ function Cta() {
           </svg>
         </button>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
